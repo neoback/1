@@ -1,0 +1,215 @@
+#port: 7890
+#socks-port: 7891
+mixed-port: 7890
+allow-lan: false
+bind-address: "*"
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+experimental:
+  ignore-resolve-fail: true
+hosts:
+  smtp.gmail.com: 74.125.20.109
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+
+  default-nameserver:
+    - 223.5.5.5
+    - 1.0.0.1
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.10.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+  use-hosts: true
+  nameserver:
+    - 119.29.29.29
+    - https://dns.alidns.com/dns-query
+    - https://aliyun.rubyfish.cn/dns-query
+proxies:
+- { name: "HK丨1倍丨香港1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32768, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "HK丨1倍丨香港2丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32769, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "HK丨1倍丨香港3丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32770, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "HK丨2倍丨香港4丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27400, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "HK丨2倍丨香港5丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27401, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "HK丨2倍丨香港6丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27402, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "TW丨1倍丨台湾1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32771, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "TW丨1倍丨台湾2丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32772, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "TW丨2倍丨台湾3丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27403, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "TW丨2倍丨台湾4丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27404, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "JP丨1倍丨日本1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32773, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "JP丨2倍丨日本2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27405, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "KR丨1倍丨韩国1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32774, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "KR丨2倍丨韩国2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27406, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "SG丨1倍丨新加坡1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32775, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "SG丨2倍丨新加坡2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27407, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "IN丨1倍丨印度1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32776, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "IN丨2倍丨印度2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27408, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "PH丨1倍丨菲律宾1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32777, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "PH丨2倍丨菲律宾2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 27409, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨1倍丨加利福利亚1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32778, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨2倍丨加利福利亚2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 62600, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨1倍丨纽约1丨YT", type: vmess, server: cmcc.gtrn.xyz, port: 32779, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨2倍丨纽约2丨YT", type: vmess, server: iplc.gtrn.xyz, port: 62601, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨1倍丨得克萨斯1丨YT", type: vmess, server: cmcc.gtrn.xyz, port: 32780, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨2倍丨得克萨斯2丨YT", type: vmess, server: iplc.gtrn.xyz, port: 62602, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨1倍丨佛罗里达1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32781, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨2倍丨佛罗里达2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 62603, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨1倍丨华盛顿1丨YT", type: vmess, server: cmcc.gtrn.xyz, port: 32782, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨2倍丨华盛顿2丨YT", type: vmess, server: iplc.gtrn.xyz, port: 62604, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨1倍丨俄勒冈1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32783, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "US丨2倍丨俄勒冈2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 62605, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "CA丨1倍丨加拿大1丨YT", type: vmess, server: cmcc.gtrn.xyz, port: 32784, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "CA丨2倍丨加拿大2丨YT", type: vmess, server: iplc.gtrn.xyz, port: 62606, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "AR丨1倍丨阿根廷1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32785, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "AR丨2倍丨阿根廷2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 52600, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "BR丨1倍丨巴西1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32786, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "BR丨2倍丨巴西2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 52601, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "UK丨1倍丨英国1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32787, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "UK丨2倍丨英国2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38700, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "FR丨1倍丨法国1丨YT", type: vmess, server: cmcc.gtrn.xyz, port: 32788, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "FR丨2倍丨法国2丨YT", type: vmess, server: iplc.gtrn.xyz, port: 38701, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "DE丨1倍丨德国1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32789, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "DE丨2倍丨德国2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38702, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "IT丨1倍丨意大利1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32790, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "IT丨2倍丨意大利2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38703, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "NL丨1倍丨荷兰1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32791, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "NL丨2倍丨荷兰2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38704, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "SE丨1倍丨瑞典1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32792, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "SE丨2倍丨瑞典2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38705, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "RU丨1倍丨俄罗斯1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32793, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "RU丨2倍丨俄罗斯2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38706, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "TR丨1倍丨土耳其1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32794, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "TR丨2倍丨土耳其2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 38707, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "AU丨1倍丨澳大利亚1丨YT", type: vmess, server: cmcc.gtrn.xyz, port: 32795, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "AU丨2倍丨澳大利亚2丨YT", type: vmess, server: iplc.gtrn.xyz, port: 62300, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "EG丨1倍丨埃及1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32796, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "EG丨2倍丨埃及2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 23700, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "ZA丨1倍丨南非1丨NF", type: vmess, server: cmcc.gtrn.xyz, port: 32797, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+- { name: "ZA丨2倍丨南非2丨NF", type: vmess, server: iplc.gtrn.xyz, port: 23701, uuid: A5B3248B-6A12-E5C9-2DFB-C178292FFC0E, alterId: 0, cipher: auto, network: tcp}
+
+
+proxy-groups:
+  - { name: "代理", type: select, proxies: ["HK丨1倍丨香港1丨NF", "HK丨1倍丨香港2丨NF", "HK丨1倍丨香港3丨NF", "HK丨2倍丨香港4丨NF", "HK丨2倍丨香港5丨NF", "HK丨2倍丨香港6丨NF", "TW丨1倍丨台湾1丨NF", "TW丨1倍丨台湾2丨NF", "TW丨2倍丨台湾3丨NF", "TW丨2倍丨台湾4丨NF", "JP丨1倍丨日本1丨NF", "JP丨2倍丨日本2丨NF", "KR丨1倍丨韩国1丨NF", "KR丨2倍丨韩国2丨NF", "SG丨1倍丨新加坡1丨NF", "SG丨2倍丨新加坡2丨NF", "IN丨1倍丨印度1丨NF", "IN丨2倍丨印度2丨NF", "PH丨1倍丨菲律宾1丨NF", "PH丨2倍丨菲律宾2丨NF", "US丨1倍丨加利福利亚1丨NF", "US丨2倍丨加利福利亚2丨NF", "US丨1倍丨纽约1丨YT", "US丨2倍丨纽约2丨YT", "US丨1倍丨得克萨斯1丨YT", "US丨2倍丨得克萨斯2丨YT", "US丨1倍丨佛罗里达1丨NF", "US丨2倍丨佛罗里达2丨NF", "US丨1倍丨华盛顿1丨YT", "US丨2倍丨华盛顿2丨YT", "US丨1倍丨俄勒冈1丨NF", "US丨2倍丨俄勒冈2丨NF", "CA丨1倍丨加拿大1丨YT", "CA丨2倍丨加拿大2丨YT", "AR丨1倍丨阿根廷1丨NF", "AR丨2倍丨阿根廷2丨NF", "BR丨1倍丨巴西1丨NF", "BR丨2倍丨巴西2丨NF", "UK丨1倍丨英国1丨NF", "UK丨2倍丨英国2丨NF", "FR丨1倍丨法国1丨YT", "FR丨2倍丨法国2丨YT", "DE丨1倍丨德国1丨NF", "DE丨2倍丨德国2丨NF", "IT丨1倍丨意大利1丨NF", "IT丨2倍丨意大利2丨NF", "NL丨1倍丨荷兰1丨NF", "NL丨2倍丨荷兰2丨NF", "SE丨1倍丨瑞典1丨NF", "SE丨2倍丨瑞典2丨NF", "RU丨1倍丨俄罗斯1丨NF", "RU丨2倍丨俄罗斯2丨NF", "TR丨1倍丨土耳其1丨NF", "TR丨2倍丨土耳其2丨NF", "AU丨1倍丨澳大利亚1丨YT", "AU丨2倍丨澳大利亚2丨YT", "EG丨1倍丨埃及1丨NF", "EG丨2倍丨埃及2丨NF", "ZA丨1倍丨南非1丨NF", "ZA丨2倍丨南非2丨NF"]}
+  - { name: "电报", type: select, proxies: ["代理","HK丨1倍丨香港1丨NF", "HK丨1倍丨香港2丨NF", "HK丨1倍丨香港3丨NF", "HK丨2倍丨香港4丨NF", "HK丨2倍丨香港5丨NF", "HK丨2倍丨香港6丨NF", "TW丨1倍丨台湾1丨NF", "TW丨1倍丨台湾2丨NF", "TW丨2倍丨台湾3丨NF", "TW丨2倍丨台湾4丨NF", "JP丨1倍丨日本1丨NF", "JP丨2倍丨日本2丨NF", "KR丨1倍丨韩国1丨NF", "KR丨2倍丨韩国2丨NF", "SG丨1倍丨新加坡1丨NF", "SG丨2倍丨新加坡2丨NF", "IN丨1倍丨印度1丨NF", "IN丨2倍丨印度2丨NF", "PH丨1倍丨菲律宾1丨NF", "PH丨2倍丨菲律宾2丨NF", "US丨1倍丨加利福利亚1丨NF", "US丨2倍丨加利福利亚2丨NF", "US丨1倍丨纽约1丨YT", "US丨2倍丨纽约2丨YT", "US丨1倍丨得克萨斯1丨YT", "US丨2倍丨得克萨斯2丨YT", "US丨1倍丨佛罗里达1丨NF", "US丨2倍丨佛罗里达2丨NF", "US丨1倍丨华盛顿1丨YT", "US丨2倍丨华盛顿2丨YT", "US丨1倍丨俄勒冈1丨NF", "US丨2倍丨俄勒冈2丨NF", "CA丨1倍丨加拿大1丨YT", "CA丨2倍丨加拿大2丨YT", "AR丨1倍丨阿根廷1丨NF", "AR丨2倍丨阿根廷2丨NF", "BR丨1倍丨巴西1丨NF", "BR丨2倍丨巴西2丨NF", "UK丨1倍丨英国1丨NF", "UK丨2倍丨英国2丨NF", "FR丨1倍丨法国1丨YT", "FR丨2倍丨法国2丨YT", "DE丨1倍丨德国1丨NF", "DE丨2倍丨德国2丨NF", "IT丨1倍丨意大利1丨NF", "IT丨2倍丨意大利2丨NF", "NL丨1倍丨荷兰1丨NF", "NL丨2倍丨荷兰2丨NF", "SE丨1倍丨瑞典1丨NF", "SE丨2倍丨瑞典2丨NF", "RU丨1倍丨俄罗斯1丨NF", "RU丨2倍丨俄罗斯2丨NF", "TR丨1倍丨土耳其1丨NF", "TR丨2倍丨土耳其2丨NF", "AU丨1倍丨澳大利亚1丨YT", "AU丨2倍丨澳大利亚2丨YT", "EG丨1倍丨埃及1丨NF", "EG丨2倍丨埃及2丨NF", "ZA丨1倍丨南非1丨NF", "ZA丨2倍丨南非2丨NF"]}
+  - { name: "油管", type: select, proxies: ["代理","HK丨1倍丨香港1丨NF", "HK丨1倍丨香港2丨NF", "HK丨1倍丨香港3丨NF", "HK丨2倍丨香港4丨NF", "HK丨2倍丨香港5丨NF", "HK丨2倍丨香港6丨NF", "TW丨1倍丨台湾1丨NF", "TW丨1倍丨台湾2丨NF", "TW丨2倍丨台湾3丨NF", "TW丨2倍丨台湾4丨NF", "JP丨1倍丨日本1丨NF", "JP丨2倍丨日本2丨NF", "KR丨1倍丨韩国1丨NF", "KR丨2倍丨韩国2丨NF", "SG丨1倍丨新加坡1丨NF", "SG丨2倍丨新加坡2丨NF", "IN丨1倍丨印度1丨NF", "IN丨2倍丨印度2丨NF", "PH丨1倍丨菲律宾1丨NF", "PH丨2倍丨菲律宾2丨NF", "US丨1倍丨加利福利亚1丨NF", "US丨2倍丨加利福利亚2丨NF", "US丨1倍丨纽约1丨YT", "US丨2倍丨纽约2丨YT", "US丨1倍丨得克萨斯1丨YT", "US丨2倍丨得克萨斯2丨YT", "US丨1倍丨佛罗里达1丨NF", "US丨2倍丨佛罗里达2丨NF", "US丨1倍丨华盛顿1丨YT", "US丨2倍丨华盛顿2丨YT", "US丨1倍丨俄勒冈1丨NF", "US丨2倍丨俄勒冈2丨NF", "CA丨1倍丨加拿大1丨YT", "CA丨2倍丨加拿大2丨YT", "AR丨1倍丨阿根廷1丨NF", "AR丨2倍丨阿根廷2丨NF", "BR丨1倍丨巴西1丨NF", "BR丨2倍丨巴西2丨NF", "UK丨1倍丨英国1丨NF", "UK丨2倍丨英国2丨NF", "FR丨1倍丨法国1丨YT", "FR丨2倍丨法国2丨YT", "DE丨1倍丨德国1丨NF", "DE丨2倍丨德国2丨NF", "IT丨1倍丨意大利1丨NF", "IT丨2倍丨意大利2丨NF", "NL丨1倍丨荷兰1丨NF", "NL丨2倍丨荷兰2丨NF", "SE丨1倍丨瑞典1丨NF", "SE丨2倍丨瑞典2丨NF", "RU丨1倍丨俄罗斯1丨NF", "RU丨2倍丨俄罗斯2丨NF", "TR丨1倍丨土耳其1丨NF", "TR丨2倍丨土耳其2丨NF", "AU丨1倍丨澳大利亚1丨YT", "AU丨2倍丨澳大利亚2丨YT", "EG丨1倍丨埃及1丨NF", "EG丨2倍丨埃及2丨NF", "ZA丨1倍丨南非1丨NF", "ZA丨2倍丨南非2丨NF"]}
+  - { name: "奈飞", type: select, proxies: ["代理","HK丨1倍丨香港1丨NF", "HK丨1倍丨香港2丨NF", "HK丨1倍丨香港3丨NF", "HK丨2倍丨香港4丨NF", "HK丨2倍丨香港5丨NF", "HK丨2倍丨香港6丨NF", "TW丨1倍丨台湾1丨NF", "TW丨1倍丨台湾2丨NF", "TW丨2倍丨台湾3丨NF", "TW丨2倍丨台湾4丨NF", "JP丨1倍丨日本1丨NF", "JP丨2倍丨日本2丨NF", "KR丨1倍丨韩国1丨NF", "KR丨2倍丨韩国2丨NF", "SG丨1倍丨新加坡1丨NF", "SG丨2倍丨新加坡2丨NF", "IN丨1倍丨印度1丨NF", "IN丨2倍丨印度2丨NF", "PH丨1倍丨菲律宾1丨NF", "PH丨2倍丨菲律宾2丨NF", "US丨1倍丨加利福利亚1丨NF", "US丨2倍丨加利福利亚2丨NF", "US丨1倍丨纽约1丨YT", "US丨2倍丨纽约2丨YT", "US丨1倍丨得克萨斯1丨YT", "US丨2倍丨得克萨斯2丨YT", "US丨1倍丨佛罗里达1丨NF", "US丨2倍丨佛罗里达2丨NF", "US丨1倍丨华盛顿1丨YT", "US丨2倍丨华盛顿2丨YT", "US丨1倍丨俄勒冈1丨NF", "US丨2倍丨俄勒冈2丨NF", "CA丨1倍丨加拿大1丨YT", "CA丨2倍丨加拿大2丨YT", "AR丨1倍丨阿根廷1丨NF", "AR丨2倍丨阿根廷2丨NF", "BR丨1倍丨巴西1丨NF", "BR丨2倍丨巴西2丨NF", "UK丨1倍丨英国1丨NF", "UK丨2倍丨英国2丨NF", "FR丨1倍丨法国1丨YT", "FR丨2倍丨法国2丨YT", "DE丨1倍丨德国1丨NF", "DE丨2倍丨德国2丨NF", "IT丨1倍丨意大利1丨NF", "IT丨2倍丨意大利2丨NF", "NL丨1倍丨荷兰1丨NF", "NL丨2倍丨荷兰2丨NF", "SE丨1倍丨瑞典1丨NF", "SE丨2倍丨瑞典2丨NF", "RU丨1倍丨俄罗斯1丨NF", "RU丨2倍丨俄罗斯2丨NF", "TR丨1倍丨土耳其1丨NF", "TR丨2倍丨土耳其2丨NF", "AU丨1倍丨澳大利亚1丨YT", "AU丨2倍丨澳大利亚2丨YT", "EG丨1倍丨埃及1丨NF", "EG丨2倍丨埃及2丨NF", "ZA丨1倍丨南非1丨NF", "ZA丨2倍丨南非2丨NF"]}
+  - { name: "b站", type: select, proxies: ["DIRECT","HK丨1倍丨香港1丨NF", "HK丨1倍丨香港2丨NF", "HK丨1倍丨香港3丨NF", "HK丨2倍丨香港4丨NF", "HK丨2倍丨香港5丨NF", "HK丨2倍丨香港6丨NF", "TW丨1倍丨台湾1丨NF", "TW丨1倍丨台湾2丨NF", "TW丨2倍丨台湾3丨NF", "TW丨2倍丨台湾4丨NF", "JP丨1倍丨日本1丨NF", "JP丨2倍丨日本2丨NF", "KR丨1倍丨韩国1丨NF", "KR丨2倍丨韩国2丨NF", "SG丨1倍丨新加坡1丨NF", "SG丨2倍丨新加坡2丨NF", "IN丨1倍丨印度1丨NF", "IN丨2倍丨印度2丨NF", "PH丨1倍丨菲律宾1丨NF", "PH丨2倍丨菲律宾2丨NF", "US丨1倍丨加利福利亚1丨NF", "US丨2倍丨加利福利亚2丨NF", "US丨1倍丨纽约1丨YT", "US丨2倍丨纽约2丨YT", "US丨1倍丨得克萨斯1丨YT", "US丨2倍丨得克萨斯2丨YT", "US丨1倍丨佛罗里达1丨NF", "US丨2倍丨佛罗里达2丨NF", "US丨1倍丨华盛顿1丨YT", "US丨2倍丨华盛顿2丨YT", "US丨1倍丨俄勒冈1丨NF", "US丨2倍丨俄勒冈2丨NF", "CA丨1倍丨加拿大1丨YT", "CA丨2倍丨加拿大2丨YT", "AR丨1倍丨阿根廷1丨NF", "AR丨2倍丨阿根廷2丨NF", "BR丨1倍丨巴西1丨NF", "BR丨2倍丨巴西2丨NF", "UK丨1倍丨英国1丨NF", "UK丨2倍丨英国2丨NF", "FR丨1倍丨法国1丨YT", "FR丨2倍丨法国2丨YT", "DE丨1倍丨德国1丨NF", "DE丨2倍丨德国2丨NF", "IT丨1倍丨意大利1丨NF", "IT丨2倍丨意大利2丨NF", "NL丨1倍丨荷兰1丨NF", "NL丨2倍丨荷兰2丨NF", "SE丨1倍丨瑞典1丨NF", "SE丨2倍丨瑞典2丨NF", "RU丨1倍丨俄罗斯1丨NF", "RU丨2倍丨俄罗斯2丨NF", "TR丨1倍丨土耳其1丨NF", "TR丨2倍丨土耳其2丨NF", "AU丨1倍丨澳大利亚1丨YT", "AU丨2倍丨澳大利亚2丨YT", "EG丨1倍丨埃及1丨NF", "EG丨2倍丨埃及2丨NF", "ZA丨1倍丨南非1丨NF", "ZA丨2倍丨南非2丨NF"]}
+  - { name: "规则外路由选择", type: select, proxies: ["代理","DIRECT"]}
+  - { name: "🎯 全球直连", type: select, proxies: ["DIRECT"]}
+  - { name: "🛑 全球拦截", type: select, proxies: ["REJECT","DIRECT"]}
+  - { name: "⛔ 应用拦截", type: select, proxies: ["REJECT","DIRECT"]}
+  - { name: "⛽ 剩余流量:195G", type: select, proxies: [DIRECT]}
+  - { name: "📅 到期时间:2022-02-09", type: select, proxies: [DIRECT]}
+rules:
+ - DOMAIN-SUFFIX,local,DIRECT
+ - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+ - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+ - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+ - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+ - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+ - IP-CIDR6,::1/128,DIRECT,no-resolve
+ - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+ - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+ - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+ - DOMAIN,app.adjust.com,DIRECT
+ - DOMAIN,log.mmstat.com,DIRECT
+ - DOMAIN,sycm.mmstat.com,DIRECT
+ - DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
+ - DOMAIN,mtalk.google.com,DIRECT
+ - DOMAIN,livew.l.qq.com,DIRECT
+ - DOMAIN,vd.l.qq.com,DIRECT
+ - DOMAIN,analytics.strava.com,DIRECT
+ - DOMAIN,msg.umeng.com,DIRECT
+ - DOMAIN,msg.umengcloud.com,DIRECT
+ - DOMAIN-SUFFIX,imap-mail.outlook.com,DIRECT
+ - DOMAIN-KEYWORD,SMTP,DIRECT
+ - DOMAIN-KEYWORD,HELO,DIRECT
+ - DOMAIN-KEYWORD,Subject,DIRECT
+ - DOMAIN-KEYWORD,find_node,DIRECT
+ - DOMAIN-KEYWORD,get_peers,DIRECT
+ - DOMAIN-KEYWORD,info_hash,DIRECT
+ - DOMAIN-KEYWORD,peer_id,DIRECT
+ - DOMAIN-KEYWORD,announce,DIRECT
+ - DOMAIN-KEYWORD,BitTorrent,DIRECT
+ - DOMAIN-KEYWORD,torrent,DIRECT
+ - DOMAIN-SUFFIX,17gouwuba.com,REJECT
+ - DOMAIN-SUFFIX,186078.com,REJECT
+ - DOMAIN-SUFFIX,189zj.cn,REJECT
+ - DOMAIN-SUFFIX,285680.com,REJECT
+ - DOMAIN-SUFFIX,3721zh.com,REJECT
+ - DOMAIN-SUFFIX,4336wang.cn,REJECT
+ - DOMAIN-SUFFIX,51chumoping.com,REJECT
+ - DOMAIN-SUFFIX,51mld.cn,REJECT
+ - DOMAIN-SUFFIX,51mypc.cn,REJECT
+ - DOMAIN-SUFFIX,58mingri.cn,REJECT
+ - DOMAIN-SUFFIX,58mingtian.cn,REJECT
